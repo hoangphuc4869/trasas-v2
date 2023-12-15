@@ -22,7 +22,12 @@
                     <img src="<?php echo get_sub_field('img') ?>" alt="" class="w-100 img-fluid">
                 </div>
 
-                <div class="ser-title">
+                <div class="ser-title ser-title-1">
+
+
+                </div>
+
+                <div class="ser-title ser-title-2">
                     <p class="t"><a href="<?php echo get_sub_field('link') ?>"><?php echo get_sub_field('title') ?></a>
                     </p>
 
@@ -36,19 +41,21 @@
 
 <div class="container-fluid activeYears px-0"
     style="background-image: url('<?php echo get_field('avitve-year-background') ?>');background-position: center;background-size:cover;">
-    <div class="row rowYears">
-        <div class="col-lg-4 col-12 itemm">
-            <p class=" active-number"><?php echo get_field('active-number') ?></p>
-            <p class="active-text"><?php echo get_field('active-text') ?></p>
-        </div>
-        <?php if(have_rows('others')): while(have_rows('others')): the_row(); ?>
-        <div class="col-lg-2 col-6 others item">
-            <?php echo get_sub_field('icon') ?>
-            <p class="others-text"><?php echo get_sub_field('text') ?></p>
-            <p class="others-number"><?php echo get_sub_field('number') ?></p>
-        </div>
-        <?php endwhile; endif; ?>
+    <div class="container">
+        <div class="row rowYears">
+            <div class="col-lg-4 col-12 itemm">
+                <p class=" active-number"><?php echo get_field('active-number') ?></p>
+                <p class="active-text"><?php echo get_field('active-text') ?></p>
+            </div>
+            <?php if(have_rows('others')): while(have_rows('others')): the_row(); ?>
+            <div class="col-lg-2 col-6 others item">
+                <?php echo get_sub_field('icon') ?>
+                <p class="others-text"><?php echo get_sub_field('text') ?></p>
+                <p class="others-number"><?php echo get_sub_field('number') ?></p>
+            </div>
+            <?php endwhile; endif; ?>
 
+        </div>
     </div>
 </div>
 <div class="container">
